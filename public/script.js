@@ -49,7 +49,12 @@ search.addEventListener('submit',(e) => {
 function getMegLink(e){
 	e.preventDefault();
 	var megUrl = e.target.href;
-	meglinkLoad.textContent='Copying...';
+
+	(function()
+		{M.toast({html: 'Magnet Link is being Copied!', displayLength: 2600,
+			classes:'red rounded'});
+	})();
+
 	const copyToClipboard = str => {
 		const el = document.createElement('textarea');
 		el.value = str;
@@ -67,15 +72,14 @@ function getMegLink(e){
 	.then((data)=>{
 		console.log(data.magnet);
 		copyToClipboard(data.magnet);
-			// setTimeout(() => {
-			//   meglinkLoad.textContent='';
-			// }, 1500)
-			(function(){
-				copyToClipboard(data.magnet);
-				alert("Magnet Link Copied");
-			})();
-			meglinkLoad.textContent='';
-		
+
+		(function()
+			{M.toast({html: 'Magnet Copied to Clipboard!', displayLength: 2500, classes:'green rounded'});
+			copyToClipboard(data.magnet);
+		})();
+
 	})
 }
+
+
 

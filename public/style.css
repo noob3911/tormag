@@ -2,7 +2,7 @@
 body{
   background-color: #411341;
   color:white;
-  font-family: Roboto;
+  font-family: roboto;
   font-size: 22px;
 }
 .container h1{
@@ -10,11 +10,14 @@ body{
   color:white;
 }
 
+li {
+  list-style-type : '';
+}
 
 a {
   background-color: #a53931;
   color: white;
-  padding: 10px;
+  /*padding: 10px;*/
   text-align: center;
   text-decoration: none;
   display: block;
