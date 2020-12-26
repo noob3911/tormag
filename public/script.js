@@ -51,7 +51,7 @@ function getMegLink(e){
 	var megUrl = e.target.href;
 
 	(function()
-		{M.toast({html: 'Magnet Link is being Copied!', displayLength: 2600,
+		{M.toast({html: 'Magnet Link is being Copied!', displayLength: 1500,
 			classes:'red rounded'});
 	})();
 
@@ -74,7 +74,7 @@ function getMegLink(e){
 		copyToClipboard(data.magnet);
 
 		(function()
-			{M.toast({html: 'Magnet Copied to Clipboard!', displayLength: 2500, classes:'green rounded'});
+			{M.toast({html: 'Magnet Copied to Clipboard!', displayLength: 2000, classes:'green rounded'});
 			copyToClipboard(data.magnet);
 		})();
 
