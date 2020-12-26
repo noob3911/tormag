@@ -19,14 +19,16 @@ search.addEventListener('submit',(e) => {
 				return reSearch.textContent+="Search again... ";
 			}
 			else{
-				for(var i in dat){
+				for(var i=0;i<dat.length; i++){
 					const list = document.createElement('li');
 					const magnet = document.createElement('ul');
 					const size = document.createElement('ul');
 					const seeds = document.createElement('ul');
-					list.innerHTML ="<b>Title</b>:  " + dat[i].title;
-					size.innerHTML="size: " + dat[i].size; 
-					seeds.innerHTML="seeds: " + dat[i].seeds;
+					size.style.color = "#e6e600";
+					seeds.style.color = "#00E800";
+					list.innerHTML =`# ${i+1} : ${dat[i].title}`;
+					size.innerHTML="Size: " + dat[i].size; 
+					seeds.innerHTML="Seeds: " + dat[i].seeds;
 
 					magnet.innerHTML=`<a href="${dat[i].link}">Copy Magnet</a>`;
 
