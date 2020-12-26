@@ -1,0 +1,21 @@
+{
+  "name": "WebScrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "sattu3911",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jssoup": "0.0.12",
+    "needle": "^2.5.2",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "torrent-search-api": "^2.1.3"
+  }
+}
