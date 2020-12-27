@@ -10,6 +10,10 @@ body{
   color:white;
 }
 
+.title{
+  overflow-wrap: break-word;
+}
+
 li {
   list-style-type : '';
 }
@@ -60,3 +64,8 @@ input.search-bar {
 button:hover {
   background: #7c7c7c6b;
 }
+
+#toast-container {
+    bottom: 3.5px !important;
+}
+
