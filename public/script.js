@@ -51,7 +51,7 @@ function getMegLink(e){
 	var megUrl = e.target.href;
 
 	(function()
-		{M.toast({html: 'Copying...!', displayLength: 2500,
+		{M.toast({html: 'Copying...!', displayLength: 4500,
 			classes:'red rounded'});
 	})();
 
