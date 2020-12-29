@@ -41,6 +41,9 @@ search.addEventListener('submit',(e) => {
 
 				}
 			}
+		}).catch((error)=>{
+			titleinp.textContent='';
+			return reSearch.textContent=" Not Found Refine Your Search... ";
 		})
 
 	})
@@ -70,7 +73,6 @@ function getMegLink(e){
 	fetch(link)
 	.then((res)=>res.json())
 	.then((data)=>{
-		console.log(data.magnet);
 		copyToClipboard(data.magnet);
 
 		(function()
