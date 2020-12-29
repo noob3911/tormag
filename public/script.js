@@ -9,14 +9,14 @@ var meglinkLoad=document.querySelector('#mgloading');
 search.addEventListener('submit',(e) => {
 	e.preventDefault();
 	const searchTerm = inputVal.value;
-	titleinp.textContent='Loading..';
+	titleinp.textContent='Loading...';
 	reSearch.textContent='';
 	const url = `/tors?address=${searchTerm}`;
 	fetch(url).then((res)=>{
 		res.json().then((dat)=>{
 			titleinp.textContent='';
 			if(dat.length===undefined){
-				return reSearch.textContent+="Search again... ";
+				return reSearch.textContent+="Enter Search Term... ";
 			}
 			else{
 				for(var i=0;i<dat.length; i++){
@@ -67,7 +67,6 @@ function getMegLink(e){
 		document.body.appendChild(el);
 		el.select();
 		document.execCommand('copy');
-		document.body.removeChild(el);
 	};
 	const link=`http://samcloud.tplinkdns.com:50000/getTorrentData?link=${megUrl}`;
 	fetch(link)
